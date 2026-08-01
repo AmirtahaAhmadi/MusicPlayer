@@ -1,0 +1,39 @@
+@import "tailwindcss";
+/* @variant dark (&:where(.dark, .dark *)); */
+
+/* @font-face {
+  font-family: YekanBakh;
+  src: url("../src/assets/Fonts/Yekan Bakh Variable/YekanBakh-VF.ttf");
+} */
+
+* {
+  box-sizing: border-box;
+  /* font-family: YekanBakh; */
+}
+
+:root {
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* custom colors */
+@theme {
+  --color-custom-blue-1: #2196f3;
+  --color-custom-blue-2: #1f8be4;
+  --color-custom-blue-3: #252641;
+  --color-custom-gray-1: #263238;
+  --color-custom-gray-2: #526a80;
+  --color-custom-gray-3: #607d8b;
+  --color-custom-gray-4: #455a64;
+  --color-custom-gray-5: #848484;
+  --color-custom-gray-6: #37474f;
+  --color-custom-red-1: #f44336;
+  --color-custom-black-1: #242424;
+}
