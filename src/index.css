@@ -1,5 +1,5 @@
 @import "tailwindcss";
-/* @variant dark (&:where(.dark, .dark *)); */
+@variant dark (&:where(.dark, .dark *));
 
 /* @font-face {
   font-family: YekanBakh;
@@ -23,8 +23,14 @@
   min-height: 100vh;
 }
 
+body {
+  background: #242424;
+}
+
 /* custom colors */
 @theme {
+  --color-custom-white-1: #f5f5f5;
+  --color-custom-white-2: #8a8a8a;
   --color-custom-blue-1: #2196f3;
   --color-custom-blue-2: #1f8be4;
   --color-custom-blue-3: #252641;
@@ -34,6 +40,13 @@
   --color-custom-gray-4: #455a64;
   --color-custom-gray-5: #848484;
   --color-custom-gray-6: #37474f;
-  --color-custom-red-1: #f44336;
   --color-custom-black-1: #242424;
+  --color-custom-black-2: #1e1e1e;
+  --color-custom-black-3: #1a1a1a;
+  --color-custom-black-4: #121212;
+  --color-custom-red-1-old: #f44336;
+  --color-custom-red-1: #dc143c;
+  --color-custom-red-2: #c41e3a;
+  --color-custom-red-3: #b00610;
+  --color-custom-red-4: #a6202e;
 }
