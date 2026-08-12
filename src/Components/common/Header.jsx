@@ -1,9 +1,16 @@
 import React from 'react';
 import useTheme from '../../Hooks/useTheme';
 import { MoonIcon, SunIcon } from '@phosphor-icons/react';
+import { NavLink } from 'react-router-dom';
 
 const Header = () => {
   // const { isDarkOn, toggle } = useTheme();
+  const linkClass = ({ isActive }) =>
+    `h-10.5 max-[400px]:h-10
+    px-4 pb-0.5 max-[400px]:pb-0 flex justify-center items-center
+    text-[16px] max-[400px]:text-[14px] max-[350px]:text-[13px]
+    border-[1.6px] border-custom-red-1 transition-all duration-100 cursor-pointer rounded-xl shadow-sm
+    hover:border-custom-red-2 ${isActive ? 'border-none bg-custom-red-3' : 'bg-custom-black-3 hover:bg-custom-black-2'}`
 
   return (
     <>
@@ -24,9 +31,9 @@ const Header = () => {
           </div> */}
 
           <div className='max-[500px]:w-full h-full flex max-[500px]:justify-center items-center gap-3'>
-            <div className='h-10.5 max-[400px]:h-10 px-4 pb-0.5 max-[400px]:pb-0 flex justify-center items-center bg-custom-black-3 text-[16px] max-[400px]:text-[14px] max-[350px]:text-[13px] border-[1.6px] border-custom-red-1 transition-all duration-100 cursor-pointer rounded-xl hover:border-custom-red-2 hover:bg-custom-black-4'>All Songs</div>
-            <div className='h-10.5 max-[400px]:h-10 px-4 pb-0.5 max-[400px]:pb-0 flex justify-center items-center bg-custom-black-3 text-[16px] max-[400px]:text-[14px] max-[350px]:text-[13px] border-[1.6px] border-custom-red-1 transition-all duration-100 cursor-pointer rounded-xl hover:border-custom-red-2 hover:bg-custom-black-4'>Playlists</div>
-            <div className='h-10.5 max-[400px]:h-10 px-4 pb-0.5 max-[400px]:pb-0 flex justify-center items-center bg-custom-black-3 text-[16px] max-[400px]:text-[14px] max-[350px]:text-[13px] border-[1.6px] border-custom-red-1 transition-all duration-100 cursor-pointer rounded-xl hover:border-custom-red-2 hover:bg-custom-black-4'>Favorites</div>
+            <NavLink to={'/'} className={linkClass}>All Songs</NavLink>
+            <NavLink to={'/playlists'} className={linkClass}>Playlists</NavLink>
+            <NavLink to={'/favorites'} className={linkClass}>Favorites</NavLink>
           </div>
           <div></div>
         </div>

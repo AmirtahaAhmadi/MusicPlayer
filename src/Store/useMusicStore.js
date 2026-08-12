@@ -44,6 +44,7 @@ export const useMusicStore = create(
       currentTrackId: null,
       isPlaying: false,
       volume: 1,
+      isPlayerExpanded: false,
 
       requestAccess: async () => {
         try {
@@ -279,11 +280,13 @@ export const useMusicStore = create(
       playTrack: (trackId) => {
         const { currentTrackId, isPlaying } = get();
         if (currentTrackId === trackId) {
-          set({ isPlaying: !isPlaying });
+          set({ isPlaying: !isPlaying, isPlayerExpanded: true });
         } else {
-          set({ currentTrackId: trackId, isPlaying: true });
+          set({ currentTrackId: trackId, isPlaying: true, isPlayerExpanded: true });
         }
       },
+
+      setPlayerExpanded: (isPlayerExpanded) => set({ isPlayerExpanded }),
 
       togglePlay: () => set((state) => ({ isPlaying: !state.isPlaying })),
 

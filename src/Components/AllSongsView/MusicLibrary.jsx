@@ -24,7 +24,7 @@ const MusicLibrary = () => {
               <li
                 key={track.id}
                 onClick={() => { playTrack(track.id) }}
-                className={`w-full h-15 px-3 flex items-center gap-2 text-custom-white-1 shadow-[0px_0px_15px_0px_#3D3D3D] cursor-pointer rounded-lg overflow-hidden ${isCurrent ? 'bg-custom-red-3' : 'bg-custom-black-4'}`}
+                className={`w-full h-15 px-3 flex items-center gap-2 text-custom-white-1 shadow-[0px_0px_15px_0px_#3D3D3D] transition-all duration-100 cursor-pointer rounded-lg overflow-hidden ${isCurrent ? 'bg-custom-red-3' : 'bg-custom-black-4 hover:bg-custom-black-3'}`}
               >
                 <div className={`w-11 h-11 flex shrink-0 justify-center items-center object-cover ${isCurrent && 'border border-custom-white-1'} rounded-xl`}>
                   {isCurrent ? (
@@ -37,7 +37,7 @@ const MusicLibrary = () => {
                 </div>
                 <div className='w-[90%] max-[500px]:w-[80%] flex flex-col'>
                   <span className="w-full truncate text-[16px]">{track.title}</span>
-                  <span className="w-full truncate text-[14px]">{track.artist}</span>
+                  <span className="w-full truncate text-[14px] text-custom-white-1/70">{track.artist}</span>
                 </div>
               </li>
             )

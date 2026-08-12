@@ -8,6 +8,8 @@ const router = createBrowserRouter([
     element: <MainLayout />,
     children: [
       { index: true, element: <AllSongsView /> },
+      { path: '/playlists', element: '' },
+      { path: '/favorites', element: '' },
     ],
   },
 ]);
